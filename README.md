@@ -1,2 +1,2 @@
 # Competitive-Programming-
-This repository contains solutions of some good problems done on various platforms.
+This repository contains solutions of some problems done on various platforms.
