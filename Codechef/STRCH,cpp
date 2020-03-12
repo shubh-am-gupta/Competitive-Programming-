@@ -1,0 +1,32 @@
+problem link--> https://www.codechef.com/APRIL19B/problems/STRCH 
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long n,i,r=0,c=0,m;
+        cin>>n;
+        char x;
+        string s;
+        cin>>s>>x;
+         m=(n*(n+1))/2;
+        for(i=0;i<=n;i++)
+        {
+            if(s[i]==x || s[i]=='\0')
+            {
+                r+=(c*(c+1)/2);
+                c=0;
+            }
+            else
+            c++;
+        }
+        cout<<m-r<<endl;
+    }
+    return 0;
+}
