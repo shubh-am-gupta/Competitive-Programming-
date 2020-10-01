@@ -3,8 +3,10 @@ problem link--> https://www.codechef.com/FEB20B/problems/LONGCOOK/
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-#define fast ios_base::sync_with_stdio(false); cin.tie(NULL); 
-#define test ll t; cin>>t; while(t--)
+#define fast ios_base::sync_with_stdio(false);
+cin.tie(NULL);cout.tie(0); 
+ll t; cin>>t;
+while(t--)
 using namespace std;
 ll d=0,a[405]={0};
 void year(ll i){
@@ -42,7 +44,7 @@ int main() {
         if(m1>2)y1++;
         if(m2<2)y2--;
         if(y1>y2){
-            cout<<"0\n";
+            cout<<"0"<<'\n';
             continue;
         } 
         y1--;
