@@ -1,4 +1,4 @@
-problem link--> https://www.codechef.com/SEPT19B/problems/CHEFK1
+/* problem link--> https://www.codechef.com/SEPT19B/problems/CHEFK1 */
 
 #include <iostream>
 using namespace std;

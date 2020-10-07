@@ -1,50 +1,45 @@
-problem link--> https://www.codechef.com/STRT2020/problems/BOXINBOX
+/* problem link--> https://www.codechef.com/STRT2020/problems/BOXINBOX */
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+
 using namespace std;
 typedef long long ll;
 #define fast ios_base::sync_with_stdio(false); cin.tie(NULL); 
 #define test ll t; cin>>t; while(t--)
+
 using namespace std;
+
+int getMinimum(int a , int b , int c , int d , int e){
+    int arr[] = {a , b , c , d , e};
+    sort(arr , arr + 5);
+    return arr[0];
+}
+
 int main() {
     fast;
-    ll n,i,j,k;
+    ll n , i , j , k;
     cin>>n;
-    ll a[n+5][n+5];
-    for(i=0;i<n;i++)
-     for(j=0;j<n;j++)
-      cin>>a[i][j];
-    j=0;
-    ll ans=0;
-    for(i=0;i<n/2;i++)
+    ll a[n + 5][n + 5];
+    for(i = 0; i < n; i++)
     {
-        ll mimi=10000000000;
-        for(k=j;k<n-j;k++)
+        for(j = 0; j < n; j++)
         {
-            mimi=min(a[i][k],mimi);
-           // cout<<a[i][k]<<" ";
-        }///break;
-        //cout<<i<<" "<<mimi<<"\n";
-        for(k=i;k<n-i;k++)
-        {
-            mimi=min(a[k][j],mimi);
+            cin>>a[i][j];
         }
-        
-        for(k=i;k<n-i;k++)
-        {
-            mimi=min(a[k][n-i-1],mimi);
-        }//cout<<mimi<<" "<<i<<"\n";
-        for(k=j;k<n-j;k++)
-        {
-            mimi=min(a[n-j-1][k],mimi);
-        }
-        //cout<<mimi<<" "<<i<<"\n";
-        ans+=mimi;
-        j++;
-        
     }
-    if(n%2)
-    ans+=a[n/2][n/2];
+    j = 0;
+    ll ans = 0;
+    for(i = 0; i < (n/2 + n%2); i++)
+    {
+        ll mimi = 1e10 + 7;
+        for(k = j; k < n - j ; k++)
+        {
+            mimi = getMinimum(a[n - i - 1][k] , a[k][i] , a[k][n - i - 1] , a[i][k] , mimi);
+        }
+        ans += mimi;
+        j++;   
+    }
     cout<<ans;
 	return 0;
 }

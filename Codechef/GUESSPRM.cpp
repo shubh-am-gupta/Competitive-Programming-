@@ -1,4 +1,4 @@
-problem link--> https://www.codechef.com/JULY19B/problems/GUESSPRM
+/* problem link--> https://www.codechef.com/JULY19B/problems/GUESSPRM */
 
 
 #include<bits/stdc++.h>
