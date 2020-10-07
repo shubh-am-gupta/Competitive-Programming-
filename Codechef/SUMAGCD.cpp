@@ -1,4 +1,4 @@
-problem link--> https://www.codechef.com/JUNE19B/problems/SUMAGCD
+/* problem link--> https://www.codechef.com/JUNE19B/problems/SUMAGCD */ 
 
 
 #include<bits/stdc++.h>

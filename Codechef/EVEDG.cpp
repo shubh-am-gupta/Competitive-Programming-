@@ -1,4 +1,4 @@
-problem link--> https://www.codechef.com/OCT19B/problems/EVEDG
+/* problem link--> https://www.codechef.com/OCT19B/problems/EVEDG */
 
 #include <iostream>
 #include<vector>
